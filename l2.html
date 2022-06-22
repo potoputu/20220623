@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Music Player</title>
+  <!-- Load FontAwesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+  <!-- Load the custom CSS style file -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+    /* .fi{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); 
+    } */
+    .img2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    .im2{
+        width: 340px;
+        height: 708px;
+        border-radius: 2%;
+        /* box-shadow: 2px 2px 5px #362400,
+  -2px -2px 10px #4b3400; */
+        animation: ana 5s ease;
+    }
+    @keyframes ana{
+        from{
+            opacity: 0%;
+        }
+        to{
+            opacity: 100%;
+        }
+    }
+    /* .im1:hover{
+        opacity: 80%;
+    } */
+    .but{
+        background-color: transparent;
+        border-color: transparent;
+        cursor: pointer;
+    }
+    
+[class^=firework-] {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  border-radius: 50%;
+}
+
+.firework-1 {
+  -webkit-animation: firework-sm 1.2s both infinite;
+          animation: firework-sm 1.2s both infinite;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+  top: 45%;
+  left: 15%;
+}
+
+.firework-2 {
+  -webkit-animation: firework-md 1.2s both infinite;
+          animation: firework-md 1.2s both infinite;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+  top: 25%;
+  left: 70%;
+}
+
+.firework-3 {
+  -webkit-animation: firework-sm 1.2s both infinite;
+          animation: firework-sm 1.2s both infinite;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  top: 80%;
+  left: 90%;
+}
+
+.firework-4 {
+  -webkit-animation: firework-sm 1.2s both infinite;
+          animation: firework-sm 1.2s both infinite;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+  top: 70%;
+  left: 25%;
+}
+
+.firework-5 {
+  -webkit-animation: firework-md 1.2s both infinite;
+          animation: firework-md 1.2s both infinite;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  top: 80%;
+  left: 55%;
+}
+
+.firework-6 {
+  -webkit-animation: firework-sm 1.2s both infinite;
+          animation: firework-sm 1.2s both infinite;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  top: 15%;
+  left: 20%;
+}
+
+.firework-7 {
+  -webkit-animation: firework-md 1.2s both infinite;
+          animation: firework-md 1.2s both infinite;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+  top: 35%;
+  left: 15%;
+}
+
+.firework-8 {
+  -webkit-animation: firework-lg 1.2s both infinite;
+          animation: firework-lg 1.2s both infinite;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  top: 85%;
+  left: 65%;
+}
+
+.firework-9 {
+  -webkit-animation: firework-lg 1.2s both infinite;
+          animation: firework-lg 1.2s both infinite;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+  top: 70%;
+  left: 75%;
+}
+
+.firework-10 {
+  -webkit-animation: firework-md 1.2s both infinite;
+          animation: firework-md 1.2s both infinite;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  top: 55%;
+  left: 15%;
+}
+
+.firework-11 {
+  -webkit-animation: firework-lg 1.2s both infinite;
+          animation: firework-lg 1.2s both infinite;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  top: 65%;
+  left: 55%;
+}
+
+.firework-12 {
+  -webkit-animation: firework-lg 1.2s both infinite;
+          animation: firework-lg 1.2s both infinite;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+  top: 65%;
+  left: 70%;
+}
+
+.firework-13 {
+  -webkit-animation: firework-md 1.2s both infinite;
+          animation: firework-md 1.2s both infinite;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  top: 15%;
+  left: 75%;
+}
+
+.firework-14 {
+  -webkit-animation: firework-sm 1.2s both infinite;
+          animation: firework-sm 1.2s both infinite;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  top: 80%;
+  left: 85%;
+}
+
+.firework-15 {
+  -webkit-animation: firework-md 1.2s both infinite;
+          animation: firework-md 1.2s both infinite;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+  top: 30%;
+  left: 70%;
+}
+
+@-webkit-keyframes firework-sm {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 70% {
+    opacity: 1;
+  }
+  100% {
+    box-shadow: -0.5rem 0rem 0 #fff, 0.5rem 0rem 0 #fff, 0rem -0.5rem 0 #fff, 0rem 0.5rem 0 #fff, 0.35rem -0.35rem 0 #fff, 0.35rem 0.35rem 0 #fff, -0.35rem -0.35rem 0 #fff, -0.35rem 0.35rem 0 #fff;
+  }
+}
+
+@keyframes firework-sm {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 70% {
+    opacity: 1;
+  }
+  100% {
+    box-shadow: -0.5rem 0rem 0 #fff, 0.5rem 0rem 0 #fff, 0rem -0.5rem 0 #fff, 0rem 0.5rem 0 #fff, 0.35rem -0.35rem 0 #fff, 0.35rem 0.35rem 0 #fff, -0.35rem -0.35rem 0 #fff, -0.35rem 0.35rem 0 #fff;
+  }
+}
+@-webkit-keyframes firework-md {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 70% {
+    opacity: 1;
+  }
+  100% {
+    box-shadow: -0.7rem 0rem 0 #fff, 0.7rem 0rem 0 #fff, 0rem -0.7rem 0 #fff, 0rem 0.7rem 0 #fff, 0.49rem -0.49rem 0 #fff, 0.49rem 0.49rem 0 #fff, -0.49rem -0.49rem 0 #fff, -0.49rem 0.49rem 0 #fff;
+  }
+}
+@keyframes firework-md {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 70% {
+    opacity: 1;
+  }
+  100% {
+    box-shadow: -0.7rem 0rem 0 #fff, 0.7rem 0rem 0 #fff, 0rem -0.7rem 0 #fff, 0rem 0.7rem 0 #fff, 0.49rem -0.49rem 0 #fff, 0.49rem 0.49rem 0 #fff, -0.49rem -0.49rem 0 #fff, -0.49rem 0.49rem 0 #fff;
+  }
+}
+@-webkit-keyframes firework-lg {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 70% {
+    opacity: 1;
+  }
+  100% {
+    box-shadow: -0.9rem 0rem 0 #fff, 0.9rem 0rem 0 #fff, 0rem -0.9rem 0 #fff, 0rem 0.9rem 0 #fff, 0.63rem -0.63rem 0 #fff, 0.63rem 0.63rem 0 #fff, -0.63rem -0.63rem 0 #fff, -0.63rem 0.63rem 0 #fff;
+  }
+}
+@keyframes firework-lg {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 70% {
+    opacity: 1;
+  }
+  100% {
+    box-shadow: -0.9rem 0rem 0 #fff, 0.9rem 0rem 0 #fff, 0rem -0.9rem 0 #fff, 0rem 0.9rem 0 #fff, 0.63rem -0.63rem 0 #fff, 0.63rem 0.63rem 0 #fff, -0.63rem -0.63rem 0 #fff, -0.63rem 0.63rem 0 #fff;
+  }
+}
+</style>
+<body>
+
+    <div class="img2"><a href="musicpage.html"><button  class="but"><img class="im2" src="l2pic.jpg" alt=""></button></a></div>
+   <div class="fi"> <div class="firework-1"></div>
+    <div class="firework-2"></div>
+    <div class="firework-3"></div>
+    <div class="firework-4"></div>
+    <div class="firework-5"></div>
+    <div class="firework-6"></div>
+    <div class="firework-7"></div>
+    <div class="firework-8"></div>
+    <div class="firework-9"></div>
+    <div class="firework-10"></div>
+    <div class="firework-11"></div>
+    <div class="firework-12"></div>
+    <div class="firework-13"></div>
+    <div class="firework-14"></div>
+    <div class="firework-15"></div>   </div> 
+    }
+
+  <!-- Load the main script for the player -->
+  <script src="main.js"></script>
+</body>
+</html>

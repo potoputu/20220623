@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Music Player</title>
+  <!-- Load FontAwesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+  <!-- Load the custom CSS style file -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style>
+    body{
+      background-color: black;
+    }
+    .img{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    .im1{
+        width: 300px;
+        height: 300px;
+        animation: box 1s ease;
+    }
+    @keyframes box{
+        from{
+          margin-top: 400%;
+          width: 200px;
+          height: 200px;
+        }
+        to{
+          margin-top: 0%;
+          width: 250px;
+          height: 250px;
+        }
+    }
+    .im1:hover{
+        opacity: 80%;
+    }
+    .but{
+        background-color: transparent;
+        border-color: transparent;
+        cursor: pointer;
+    }
+    
+</style>
+<body>
+    
+    <!-- <audio id="start_sfx" src="tenu.mp3"></audio> -->
+    <div class="img"><a href="l2.html" ><button  class="but"><img class="im1" src="Daco_5016810.png" alt="" ></button></a></div>
+
+  <!-- Load the main script for the player -->
+  <script src="main.js"></script>
+  <!-- <script>  
+      var start_sfx = new Audio('tenu.mp3');  
+  function play(){
+
+      start_sfx.play();
+  }
+  </script> -->
+</body>
+</html>
